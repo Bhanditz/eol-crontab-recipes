@@ -3,6 +3,10 @@ eol-crontab-recipes CHANGELOG
 
 This file is used to list changes made in each version of the eol-crontab-recipes cookbook.
 
+0.1.3
+-----
+- Patrick Leary - redirecting errors in create_ggi_files
+
 0.1.2
 -----
 - Patrick Leary - fixed syntax error in create_ggi_files

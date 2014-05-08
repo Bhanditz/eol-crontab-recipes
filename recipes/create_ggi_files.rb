@@ -22,7 +22,7 @@ cron "create_mapping_file" do
   minute "0"
   weekday "4"
   user "deploy"
-  command "/bin/bash -l -c 'cd /var/www/eol/current && bundle exec rake ggi:create_mapping_file RAILS_ENV=production'"
+  command "/bin/bash -l -c 'cd /var/www/eol/current && bundle exec rake ggi:create_mapping_file RAILS_ENV=production' 2>&1"
 end
 
 cron "create_data_file" do
@@ -30,5 +30,5 @@ cron "create_data_file" do
   minute "10"
   weekday "4"
   user "deploy"
-  command "/bin/bash -l -c 'cd /var/www/eol/current && bundle exec rake ggi:create_data_file RAILS_ENV=production'"
+  command "/bin/bash -l -c 'cd /var/www/eol/current && bundle exec rake ggi:create_data_file RAILS_ENV=production' 2>&1"
 end
