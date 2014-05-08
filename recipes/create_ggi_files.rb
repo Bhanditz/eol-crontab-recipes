@@ -20,13 +20,15 @@
 cron "create_mapping_file" do
   hour "5"
   minute "0"
-  day "4"  # Thursday
+  weekday :thursday
+  user "deploy"
   command "/bin/bash -l -c 'cd /var/www/eol/current && bundle exec rake ggi:create_mapping_file RAILS_ENV=production'"
 end
 
 cron "create_data_file" do
   hour "5"
   minute "10"
-  day "4"  # Thursday
+  weekday :thursday
+  user "deploy"
   command "/bin/bash -l -c 'cd /var/www/eol/current && bundle exec rake ggi:create_data_file RAILS_ENV=production'"
 end
